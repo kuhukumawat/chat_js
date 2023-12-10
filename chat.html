@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+            body{
+                background-image: linear-gradient(to right, rgb(61 ,44 ,119) , rgb(104 ,104 ,33));
+                color: #fff;
+            }
+            body h1{
+                 text-align: center;
+            }
+             button{
+                border: none;
+                border-radius: 0.5em;
+                cursor: pointer;
+                background-color: gray;
+
+             }
+
+              button:hover{
+                filter: brightness(0.9);
+              }
+               button:active{
+                transform: translate(2px);
+               }
+               .user_1-selector{
+                background-color: rgb(27 , 16 , 16);
+                width: 300px;
+                height: 4em;
+                margin-left: 545px;
+                margin-right: -500px;
+                display: inline-block;
+                color: #fff;
+               }
+               .active-person{
+                background-color: blue;
+                box-shadow: 0 0 0.5em 0.1em #c3c3c333;
+               }
+               #chatContainer{
+                background-color: #15202b94;
+                font-family: 'Roboto', sans-serif;
+                border-radius: 0.5em;
+                padding: 0.5em 1.25em;
+                margin-left: 550px;
+                margin-right: 460px;
+                margin-top: 30px;
+                max-height: 40em;
+                max-width: 37.5em;
+                height: 50em;
+                box-shadow: 0 0 0.5em 0.1em #c3c3c333;
+                overflow-y: scroll;
+               }
+               .message{
+                border-radius: 10px;
+                padding: 0.625em;
+                margin-bottom: 0.625em;
+                flex-direction: column;
+               }
+               .komal-message{
+                background-color: #b0b746;
+               }
+               .robin-message{
+                background-color: rgb(151 , 90 ,151);
+               }
+               .message.message-sender{
+                font-weight: bold;
+                padding-left: 1em;
+                padding-top: 1em;
+                margin-bottom: 0.31em;
+               }
+               .message.message-text{
+                padding-left: 1em;
+                padding-top: 0.2em;
+                font-size: 1em;
+                margin-bottom: 0.1em;
+                word-wrap: break-word;
+               }
+               .message.message-timeStamp{
+                padding-right: 1em;
+                padding-bottom: 1em;
+                font-size: 0.75em;
+                text-align: right;
+               }
+               #text_msg{
+                margin-top: 400px;
+                width: 26em;
+                height: 3em;
+                overflow-y: scroll;
+                padding-left: 1em;
+                margin-left: 10px;
+                border: none;
+                border-radius: 10px;
+                font-size: 1.1em;
+               }
+               #submit{
+                background-color: rgb(18 , 18 ,231);
+                color: #fff;
+                height: 4em;
+                width: 5.6em;
+               }
+               #clear_chat{
+                margin-top: 10px;
+                margin-left: 220px;
+                justify-content: center;
+                height: 3.5em;
+                width: 7em;
+               }
+    </style>
+</head>
+<body>
+     <h1 style="font-style: italic;">GupShup Point</h1><br><br>
+     <div id="chatFriend"> 
+        <button class="user_1-selector active_person" id="user1Chat">Komal</button>
+        <button class="user_1-selector" id="user2Chat">Robin</button>
+     </div>
+     <div id="chatContainer">
+        <h2 id="chat_header">Komal Messaging.....</h2>
+        <div id="user_Messages">
+            <!-- Messages will be displayed here -->
+        </div>
+          <form id="input_message">
+            <input type="text" id="text_msg" required placeholder="Type Here Komal.....">  
+            <button id="submit">Send</button>
+          </form>
+          <br>
+          <button id="clear_chat">Clear Chat</button>
+     </div>
+     
+</body>
+<script src="chat.js"></script>
+
+</html>
